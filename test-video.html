@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing Video in HTML</title>
+  </head>
+  <body>
+    <h2>Example of Img Tag</h2>
+    <!-- <img src="assets/success.png" alt="Success" /> -->
+    <img src="assets/thumbs-up.gif" alt="Thumbs up!" />
+
+    <h1>Testing Video Element - local files</h1>
+    <video
+      src="assets/dramatic-chipmunk.mp4"
+      width="500px"
+      controls
+      autoplay
+      muted
+      loop
+    ></video>
+
+    <h1>Testing Video Element - URL</h1>
+    <!-- <video src="???"></video> -->
+
+    <h1>Testing Video Element - with backups</h1>
+    <video height="250" controls autoplay muted loop>
+      <source src="assets/dramatic-chipmunk.mp4" type="video/mp4" />
+      <source src="assets/keyboard-cat-backup.webm" type="video/webm" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- EMBED
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=vSWi_4CguO-F2Kox" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ -->
+  </body>
+</html>
