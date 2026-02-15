@@ -6,53 +6,130 @@
     <title>Testing Video in HTML</title>
   </head>
   <body>
-    <h2>Example of Img Tag</h2>
-    <img src="assets/success.png" width="500px" alt="Success" />
-    <img src="assets/thumbs-up.gif" alt="Thumbs up!" />
+    <h1>Testing Video Elements in HTML</h1>
+    <section id="preface">
+      <p>
+        Here is an example of an <code>&lt;img&gt;</code> tag. The source
+        specifies the image rendered to the page.
+      </p>
+      <h2>Example of Img Tag</h2>
+      <img src="assets/success.png" width="500px" alt="Success" />
+      <p>
+        But we want a video. We can try and cheat by making the source a gif.
+      </p>
+      <img src="assets/thumbs-up.gif" alt="Thumbs up!" />
+      <p>But HTML has a better way!</p>
+    </section>
 
-    <h1>Testing Video Element - local files</h1>
-    <video
-      src="assets/dramatic-chipmunk.mp4"
-      width="500px"
-      controls
-      autoplay
-      muted
-      loop
-    ></video>
+    <section id="video-local-file">
+      <h1>Testing Video Element - local file</h1>
+      <p>Let’s use a video element.</p>
+      <p>It looks like this:</p>
+      <code>&lt;video&gt;&lt;/video&gt;</code>
+      <p>
+        Just like the img tag, we need a src. I’ll add controls and a few other
+        attributes as a test. This code should render the video to the page,
+        automatically start playing the video muted and on a loop. We’ve also
+        specified a width.
+      </p>
+      <video
+        src="assets/dramatic-chipmunk.mp4"
+        width="500px"
+        controls
+        autoplay
+        muted
+        loop
+      ></video>
+    </section>
 
-    <h1>Testing Video Element - URL</h1>
-    <video controls>
-      <source
-        src="https://thenickedwards.github.io/HTML-110_Module-7_Video/assets/double-rainbow.mp4"
-      />
-    </video>
+    <section id="video-URL">
+      <h1>Testing Video Element - URL</h1>
+      <p>
+        The source doesn’t always need to be local. For example if you have a
+        video hosted somewhere, you can reference the URL.
+      </p>
+      <video controls>
+        <source
+          src="https://thenickedwards.github.io/HTML-110_Module-7_Video/assets/double-rainbow.mp4"
+        />
+      </video>
+    </section>
 
-    <h1>Testing Video Element - with backups</h1>
-    <video height="250" controls autoplay muted loop>
-      <source src="asset /dramatic-chipmunk.mp4" type="video/mp4" />
-      <source src="assets/keyboard-cat-backup.webm" type="video/webm" />
-      Your browser does not support the video tag.
-    </video>
+    <section id="video-w-backups">
+      <h1>Testing Video Element - with backups</h1>
+      <p>
+        It’s important to consider that not every user who visits your site to
+        watch your incredible viral video will have a browser that supports your
+        video filetype. You can help them out by specifying backups.
+      </p>
+      <p>
+        The browser will try each source in the order listed and display the
+        message if the video cannot be played. We can test this by using a
+        different video as the backup. I’ll break the pathing to the chipmunk
+        video and then we get this cat video instead.
+      </p>
+      <video height="250" controls autoplay muted loop>
+        <source src="asset /dramatic-chipmunk.mp4" type="video/mp4" />
+        <source src="assets/keyboard-cat-backup.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
 
-    <h1>Testing Video Element - Embed</h1>
-    <!-- EMBED - code copied from YouTube video share option -->
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=vSWi_4CguO-F2Kox"
-      title="YouTube video player"
-      frameborder="0"
-      allow="
-        accelerometer;
-        autoplay;
-        clipboard-write;
-        encrypted-media;
-        gyroscope;
-        picture-in-picture;
-        web-share;
-      "
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
+    <section id="video-embed">
+      <h1>Testing Video Element - Embed</h1>
+      <p>Another way to insert a video into your HTML is by embedding it.</p>
+      <p>
+        This is a pretty famous video that I want to make available but it’s
+        important to remember that the host or owner of the video controls its
+        access. If the user were to delete this video or their account or if the
+        platform restricted access to the video or shut down, the video on my
+        site would show as broken. Let’s check to make sure everything is
+        working correctly.
+      </p>
+      <!-- EMBED - code copied from YouTube video share option -->
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=1Fo5dL4u6OPVr3tM"
+        title="YouTube video player"
+        frameborder="0"
+        allow="
+          accelerometer;
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          gyroscope;
+          picture-in-picture;
+          web-share;
+        "
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </section>
+    <section id="other-multimedia-and-wrap-up">
+      <p>Perfect!</p>
+      <p>
+        If you’d like to dig deeper into this subject check out the
+        documentation HTML elements such as for:
+      </p>
+      <ul>
+        <li><code>&lt;audio&gt;</code></li>
+        <li><code>&lt;track&gt;</code></li>
+        <li><code>&lt;object&gt;</code></li>
+        <li><code>&lt;canvas&gt;</code></li>
+        <li><code>&lt;map&gt;</code></li>
+        <li><code>&lt;picture&gt;</code></li>
+      </ul>
+      <p>
+        That’s right there’s a <code>&lt;img&gt;</code> tag and a
+        <code>&lt;picture&gt;</code> tag. There’s lots more to explore as far as
+        including multimedia in your HTML.
+      </p>
+      <p>
+        Congrats! Now you can add videos into your website. Give it a try with
+        some of your favorite videos on the internet or something you’ve made
+        yourself. Thanks for visitng!
+      </p>
+    </section>
   </body>
 </html>
