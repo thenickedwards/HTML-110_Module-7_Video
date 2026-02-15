@@ -41,7 +41,7 @@ This will render the video to the page but there are a few more steps. You can a
 
 (View this in the browser.)
 
-The source doesn’t always need to be local. For example if you have a video hosted somewhere, you can reference the URL. In this example, I’m uploaded the file to GitHub and am referencing it directly.
+The source doesn’t always need to be local. For example if you have a video hosted somewhere, you can reference the URL. In this example, I’ve uploaded the file to GitHub and am referencing it directly.
 
    <h1>Testing Video Element - URL</h1>
    <video controls>
